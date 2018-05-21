@@ -7,9 +7,9 @@
 		class="com.pluralsight.spring.springfundamentals.repository.HibernateCustomerRepositoryImpl" />
 
 	<bean name="customerService"
-		class="com.pluralsight.spring.springfundamentals.service.CustomerServiceImpl">
+		class="com.pluralsight.spring.springfundamentals.service.CustomerServiceImpl" autowire="constructor">
 		<!-- <property name="customerRepository" ref="customerRepository"></property> -->
-		<constructor-arg index="0" ref="customerRepository"></constructor-arg>
+		<!-- <constructor-arg index="0" ref="customerRepository"></constructor-arg> -->
 	</bean>
 
 </beans>
