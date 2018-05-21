@@ -12,7 +12,7 @@ public class CustomerApplication {
 	public static void main(String[] args) {
 		applicationContext = new ClassPathXmlApplicationContext("ApplicationContext.xml");
 		CustomerService customerService = applicationContext.getBean("customerService", CustomerService.class);
-		//CustomerService customerService = new CustomerServiceImpl();
+		// CustomerService customerService = new CustomerServiceImpl();
 		System.out.println(customerService.findAll().get(0).getFirstName());
 		System.out.println(customerService.findAll().get(0).getLastName());
 	}
